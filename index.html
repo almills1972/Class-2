@@ -7,16 +7,34 @@
 </head>
 <body>
     <script>
-    var rWord = prompt ("Choose Word to Repeat");
-    var t = prompt ("How many times");
-
-       function repeatWord(word, times){
-           for(var i = 1; i <= times; i++){
-           document.write(word);
+    
+       function printNum(myArray){
+           for(var i = 0; i < myArray.length; i++){
+           document.write("Print " + myArray[i]);
            document.write("<br>")
            }
+           
         }
-        repeatWord(rWord,t)        
+        var nums = [1,2,3,4,5,6,7,8]
+        //var MyNumber = promt("Give me a number to add?")
+        printNum(nums) 
+        document.write("===================================<br>") 
+
+        nums.push(9); 
+        nums.push(10);
+        nums.push(11);    
+
+        printNum(nums)
+
+        document.write("===================================<br>")
+
+        nums.pop();
+        nums.pop();
+        nums.pop();
+        nums.pop();
+        nums.pop();
+
+        printNum(nums)
     </script>
 </body>
 </html>
